@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cevedi Studio - Posts</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Search Bar -->
+    <div class="search-bar" id="searchBar">
+        <input type="text" id="searchInput" placeholder="Search posts..." />
+        <button onclick="searchPosts()">Search</button>
+    </div>
+
+    <!-- Full-screen post selection panel -->
+    <div class="post-quantum-list" id="postList">
+        <!-- Delta Executor -->
+        <div class="post-card" onclick="showHolotheater('deltaTheater')">
+            <h2>Delta Executor</h2>
+            <p>Quantum Execution Interface</p>
+        </div>
+
+        <!-- Xeno Executor -->
+        <div class="post-card" onclick="showHolotheater('xenoTheater')">
+            <h2>Xeno Executor</h2>
+            <p>Advanced Execution Environment</p>
+        </div>
+
+        <!-- Roblox Download -->
+        <div class="post-card" onclick="showHolotheater('robloxTheater')">
+            <h2>Download Roblox</h2>
+            <p>Guide for iOS, Android, and Windows</p>
+        </div>
+
+        <!-- Speed Hub X -->
+        <div class="post-card" onclick="showHolotheater('speedHubTheater')">
+            <h2>Speed Hub X</h2>
+            <p>The best script for Blox Fruits, Fisch, Pet Simulator 99, The Strongest Battlegrounds, and Muscle Legends</p>
+        </div>
+
+        <!-- Thao Hub -->
+        <div class="post-card" onclick="showHolotheater('thaoHubTheater')">
+            <h2>Thao Hub</h2>
+            <p>Mainly for Arsenal but features a universal aimbot</p>
+        </div>
+
+        <!-- Cevor MM2V6 -->
+        <div class="post-card" onclick="showHolotheater('cevorMM2Theater')">
+            <h2>Cevor MM2V8</h2>
+            <p>Murder Mystery 2 Script</p>
+        </div>
+
+        <!-- AI Scripts 2025 -->
+        <div class="post-card" onclick="showHolotheater('aiScriptsTheater')">
+            <h2>AI Scripts 2025</h2>
+            <p>Advanced AI-powered scripts for Roblox games</p>
+        </div>
+
+        <!-- SSS - Spaceship Shooting Showdown -->
+        <div class="post-card" onclick="showSSSTheater()">
+            <h2>SSS - Spaceship Shooting Showdown</h2>
+            <p>An epic spaceship battle game</p>
+        </div>
+
+        <!-- Atlantis Executor -->
+        <div class="post-card" onclick="showHolotheater('atlantisTheater')">
+            <h2>Atlantis Executor</h2>
+            <p>Advanced Roblox Exploit</p>
+        </div>
+
+        <!-- Cevor Executor -->
+        <div class="post-card" onclick="showHolotheater('cevorExecutorTheater')">
+            <h2>Cevor Executor</h2>
+            <p>Trusted Executor by Cevedi Studio</p>
+        </div>
+    </div>
+
+    <!-- Theater view for Delta Executor -->
+    <div class="holo-theater" id="deltaTheater">
+        <div class="button-container">
+            <button class="back-button" onclick="goBackToPosts()">
+                <span>← Back</span>
+            </button>
+            <button class="download-singularity" onclick="showQuantumAlert()">
+                <span>⚛️ Download</span>
+            </button>
+            <button class="download-singularity" onclick="window.open('https://rekonise.com/delta-website-leic3', '_blank')">
+                <span>Delta Website</span>
+            </button>
+            <button class="download-singularity ldplayer" onclick="showLdPlayerAlert()">
+                <span>Download LDPlayer</span>
+            </button>
+        </div>
+        <div class="holo-content">
+            <iframe 
+                class="singularity-video"
+                src="https://drive.google.com/file/d/1_otCaScFKWUqTS0EA5bzX1K28zctRLUd/preview" 
+                allow="autoplay; fullscreen"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Theater view for Xeno Executor -->
+    <div class="holo-theater" id="xenoTheater">
+        <div class="button-container">
+            <button class="back-button" onclick="goBackToPosts()">
+                <span>← Back</span>
+            </button>
+            <button class="download-singularity" onclick="showXenoAlert()">
+                <span>⚛️ Download Xeno</span>
+            </button>
+        </div>
+        <div class="holo-content">
+            <iframe 
+                class="singularity-video"
+                src="https://drive.google.com/file/d/16o4daTrbuk93e5AIdwS44vSMeQJeEQsw/preview" 
+                allow="autoplay; fullscreen"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Theater view for Roblox Download -->
+    <div class="holo-theater" id="robloxTheater">
+        <div class="button-container">
+            <button class="back-button" onclick="goBackToPosts()">
+                <span>← Back</span>
+            </button>
+            <button class="download-singularity" onclick="window.open('https://www.roblox.com/download/client?os=win', '_blank')">
+                <span>Download Roblox (Windows)</span>
+            </button>
+        </div>
+        <div class="holo-content">
+            <div class="roblox-guide">
+                <h2>How to Download Roblox</h2>
+                <h3>For iOS:</h3>
+                <ol>
+                    <li>Open the App Store on your iOS device.</li>
+                    <li>Search for "Roblox" in the search bar.</li>
+                    <li>Tap "Get" to download and install the app.</li>
+                    <li>Launch Roblox and sign in or create an account.</li>
+                </ol>
+                <h3>For Android:</h3>
+                <ol>
+                    <li>Open the Google Play Store on your Android device.</li>
+                    <li>Search for "Roblox" in the search bar.</li>
+                    <li>Tap "Install" to download and install the app.</li>
+                    <li>Launch Roblox and sign in or create an account.</li>
+                </ol>
+                <h3>For Windows:</h3>
+                <ol>
+                    <li>Click the "Download Roblox (Windows)" button above.</li>
+                    <li>Run the installer and follow the on-screen instructions.</li>
+                    <li>Launch Roblox and sign in or create an account.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theater view for Speed Hub X -->
+    <div class="holo-theater" id="speedHubTheater">
+        <div class="button-container">
+            <button class="back-button" onclick="goBackToPosts()">
+                <span>← Back</span>
+            </button>
+        </div>
+        <div class="holo-content">
+            <h2>Speed Hub X</h2>
+            <p>Speed Hub X is the best script for Fisch, Pet Simulator 99, The Strongest Battlegrounds, and Muscle Legends. And Kind of good in blox fruits</p>
+            <div class="script-container">
+                <pre id="scriptCode">
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+                </pre>
+                <button class="copy-button" onclick="copyScript()">Copy to Clipboard</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theater view for Thao Hub -->
+    <div class="holo-theater" id="thaoHubTheater">
+        <div class="button-container">
+            <button class="back-button" onclick="goBackToPosts()">
+                <span>← Back</span>
+            </button>
+        </div>
+        <div class="holo-content">
+            <h2>Thao Hub</h2>
+            <p>Thao Hub is mainly for Arsenal but features a universal aimbot.</p>
+            <div class="script-container">
+                <pre id="thaoHubScriptCode">
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubArsenal"))()
+                </pre>
+                <button class="copy-button" onclick="copyThaoHubScript()">Copy to Clipboard</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theater view for Cevor MM2V6 -->
+    <div class="holo-theater" id="cevorMM2Theater">
+        <div class="button-container">
+            <button class="back-button" onclick="goBackToPosts()">
+                <span>← Back</span>
+            </button>
+        </div>
+        <div class="holo-content">
+            <h2>Cevor MM2V8</h2>
+            <p>Murder Mystery 2 Script</p>
+            <div class="script-container">
+                <pre id="cevorMM2ScriptCode">
+loadstring(game:HttpGet("https://raw.githubusercontent.com/THEBWARE/-/refs/heads/main/CevorMM2V8.lua", true))()
+                </pre>
+                <button class="copy-button" onclick="copyCevorMM2Script()">Copy to Clipboard</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theater view for AI Scripts 2025 -->
+    <div class="holo-theater" id="aiScriptsTheater">
+        <div class="button-container">
+            <button class="back-button" onclick="goBackToPosts()">
+                <span>← Back</span>
+            </button>
+        </div>
+        <div class="holo-content">
+            <h2>AI Scripts 2025</h2>
+            <p>Advanced AI-powered scripts for Roblox games.</p>
+            <div class="script-container">
+                <pre id="aiScriptsCode">
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RealBatu20/AI-Scripts-2025/refs/heads/main/ExecutorTestsPanel.lua"))()
+                </pre>
+                <button class="copy-button" onclick="copyAIScripts()">Copy to Clipboard</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theater view for SSS - Spaceship Shooting Showdown -->
+    <div class="holo-theater" id="sssTheater">
+        <div class="button-container">
+            <button class="back-button" onclick="goBackToPosts()">
+                <span>← Back</span>
+            </button>
+            <button class="download-singularity" onclick="showSSSDownloadAlert()">
+                <span>Download SSS</span>
+            </button>
+        </div>
+        <div class="holo-content">
+            <iframe 
+                class="singularity-video"
+                id="sssVideo"
+                src=""
+                allow="autoplay; fullscreen"
+                allowfullscreen>
+            </iframe>
+            <div id="sssAccessDenied" style="display: none; text-align: center; margin-top: 2rem;">
+                <h2>Access Denied</h2>
+                <p>You do not have permission to view this content.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theater view for Atlantis Executor -->
+    <div class="holo-theater" id="atlantisTheater">
+        <div class="button-container">
+            <button class="back-button" onclick="goBackToPosts()">
+                <span>← Back</span>
+            </button>
+            <button class="download-singularity" onclick="showAtlantisAlert()">
+                <span>Download Atlantis</span>
+            </button>
+        </div>
+        <div class="holo-content">
+            <iframe 
+                class="singularity-video"
+                src="https://drive.google.com/file/d/1Ag3lgeYqzgpdYWVrtvl82AxYcnq7M8WM/preview" 
+                allow="autoplay; fullscreen"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Theater view for Cevor Executor -->
+    <div class="holo-theater" id="cevorExecutorTheater">
+        <div class="button-container">
+            <button class="back-button" onclick="goBackToPosts()">
+                <span>← Back</span>
+            </button>
+            <button class="download-singularity" onclick="showCevorExecutorAlert()">
+                <span>Download Cevor Executor</span>
+            </button>
+        </div>
+        <div class="holo-content">
+            <h2>Cevor Executor</h2>
+            <p>Trusted Executor by Cevedi Studio</p>
+        </div>
+    </div>
+
+    <!-- Quantum Warning Popup -->
+    <div class="quantum-overlay" id="quantumOverlay"></div>
+    <div class="quantum-alert" id="quantumAlert">
+        <h2>⚠️ QUANTUM WARNING</h2>
+        <div class="quantum-warning">
+            <p><strong>Cevedi Studio Disclaimer:</strong></p>
+            <p>We are not affiliated with Delta Executor. This third-party software might contain malicious code. Use at your own risk.</p>
+            <ul>
+                <li>Potential system instability</li>
+                <li>Security vulnerabilities</li>
+                <li>Unauthorized data access</li>
+            </ul>
+        </div>
+        <div class="quantum-alert-buttons">
+            <button onclick="window.open('https://rekonise.com/delta-bootstrapper-d4sc9', '_blank')">
+                Proceed
+            </button>
+            <button class="abort" onclick="hideQuantumAlert()">
+                Abort
+            </button>
+        </div>
+    </div>
+
+    <!-- Xeno Warning Popup -->
+    <div class="quantum-overlay" id="xenoOverlay"></div>
+    <div class="quantum-alert" id="xenoAlert">
+        <h2>⚠️ QUANTUM WARNING</h2>
+        <div class="quantum-warning">
+            <p><strong>Cevedi Studio Disclaimer:</strong></p>
+            <p>We are not affiliated with Xeno Executor. This third-party software might contain malicious code. Use at your own risk.</p>
+            <ul>
+                <li>Potential system instability</li>
+                <li>Security vulnerabilities</li>
+                <li>Unauthorized data access</li>
+            </ul>
+        </div>
+        <div class="quantum-alert-buttons">
+            <button onclick="window.open('https://rekonise.com/xeno-executor-shkwg', '_blank')">
+                Proceed
+            </button>
+            <button class="abort" onclick="hideXenoAlert()">
+                Abort
+            </button>
+        </div>
+    </div>
+
+    <!-- LDPlayer Popup -->
+    <div class="quantum-overlay" id="ldPlayerOverlay"></div>
+    <div class="quantum-alert" id="ldPlayerAlert">
+        <h2>✅ LDPlayer</h2>
+        <div class="quantum-warning">
+            <p><strong>Cevedi Studio Verification:</strong></p>
+            <p>LDPlayer is a secure and trusted Android emulator. It is safe to download and use.</p>
+        </div>
+        <div class="quantum-alert-buttons">
+            <button onclick="window.open('https://www.ldplayer.net/', '_blank')">
+                Download LDPlayer
+            </button>
+            <button class="abort" onclick="hideLdPlayerAlert()">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- SSS Download Popup -->
+    <div class="quantum-overlay" id="sssOverlay"></div>
+    <div class="quantum-alert" id="sssDownloadAlert">
+        <h2>✅ SSS - Spaceship Shooting Showdown</h2>
+        <div class="quantum-warning">
+            <p><strong>Cevedi Studio Verification:</strong></p>
+            <p>This software is created and verified by Cevedi Studio. It is safe to download and use.</p>
+        </div>
+        <div class="quantum-alert-buttons">
+            <button onclick="window.open('https://github.com/THEBWARE/-/releases/download/SSS/SSS.exe', '_blank')">
+                Download SSS
+            </button>
+            <button class="abort" onclick="hideSSSDownloadAlert()">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- Atlantis Alert Popup -->
+    <div class="quantum-overlay" id="atlantisOverlay"></div>
+    <div class="quantum-alert" id="atlantisAlert">
+        <h2>⚠️ WARNING</h2>
+        <div class="quantum-warning">
+            <p><strong>Cevedi Studio Disclaimer:</strong></p>
+            <p>We are not affiliated with Atlantis Executor. This third-party software might contain malicious code. Use at your own risk.</p>
+            <ul>
+                <li>Potential system instability</li>
+                <li>Security vulnerabilities</li>
+                <li>Unauthorized data access</li>
+            </ul>
+        </div>
+        <div class="quantum-alert-buttons">
+            <button onclick="window.open('https://www.kingexploits.com/post/atlantis-exploit', '_blank')">
+                Proceed
+            </button>
+            <button class="abort" onclick="hideAtlantisAlert()">
+                Abort
+            </button>
+        </div>
+    </div>
+
+    <!-- Cevor Executor Alert Popup -->
+    <div class="quantum-overlay" id="cevorExecutorOverlay"></div>
+    <div class="quantum-alert" id="cevorExecutorAlert">
+        <h2>⚠️ WARNING</h2>
+        <div class="quantum-warning">
+            <p><strong>Cevedi Studio Disclaimer:</strong></p>
+            <p>Cevor Executor is made by Cevedi Studio and is trusted. However, the API it uses (Forlorn API) is not 100% safe.</p>
+            <ul>
+                <li>Potential API instability</li>
+                <li>Use at your own risk</li>
+            </ul>
+        </div>
+        <div class="quantum-alert-buttons">
+            <button onclick="window.open('https://thebware.github.io/-/CevorExecutor.html', '_blank')">
+                Proceed
+            </button>
+            <button class="abort" onclick="hideCevorExecutorAlert()">
+                Abort
+            </button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
