@@ -1,0 +1,78 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.quantum-container {
+    background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.quantum-title {
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, #00ffff, #00ffaa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.quantum-subtitle {
+    font-size: 1rem;
+    color: #aaaaaa;
+    margin-bottom: 20px;
+}
+
+.script-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.script-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1a1a1a;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.script-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+.script-name {
+    font-size: 1.1rem;
+    color: #00ffff;
+}
+
+.quantum-button {
+    background: linear-gradient(90deg, #00ffff, #00ffaa);
+    border: none;
+    color: #000;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+.quantum-button:hover {
+    opacity: 0.8;
+}
