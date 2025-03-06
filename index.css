@@ -1,0 +1,343 @@
+:root {
+    --stardust: rgba(255, 255, 255, 0.1);
+    --supernova: #ff00ff;
+    --quantum-blue: #00f7ff;
+    --event-horizon: #0a0a15;
+}
+
+body {
+    font-family: 'Oxanium', sans-serif;
+    background: radial-gradient(circle at center, var(--event-horizon), #000);
+    color: var(--quantum-blue);
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Search Bar */
+.search-bar {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 103;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.search-bar input {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--quantum-blue);
+    border-radius: 8px;
+    color: var(--quantum-blue);
+    outline: none;
+    width: 300px;
+}
+
+.search-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.search-bar button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background: linear-gradient(135deg, var(--quantum-blue), var(--supernova));
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 247, 255, 0.4);
+}
+
+.search-bar button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.6);
+}
+
+/* Full-screen post selection panel */
+.post-quantum-list {
+    position: fixed;
+    top: 5rem;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 5rem);
+    display: block;
+    backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 100;
+    overflow-y: auto;
+    padding: 1rem 0;
+}
+
+.post-card {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+.post-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0, 247, 255, 0.1),
+        transparent
+    );
+    transition: 0.6s;
+}
+
+.post-card:hover {
+    transform: translateX(20px);
+    background: rgba(0, 247, 255, 0.05);
+}
+
+.post-card:hover::before {
+    left: 100%;
+}
+
+.post-card h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.post-card p {
+    margin: 0.5rem 0 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Theater view */
+.holo-theater {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 4rem;
+    display: none;
+    z-index: 101;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.holo-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.singularity-video {
+    width: 100%;
+    height: calc(100vh - 200px);
+    border: 2px solid var(--quantum-blue);
+    border-radius: 20px;
+    box-shadow: 0 0 80px rgba(0, 247, 255, 0.3);
+    background: #000;
+    margin-top: 2rem;
+}
+
+/* Updated Button Container */
+.button-container {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: 102;
+    gap: 1rem;
+}
+
+/* Updated Back Button Styles */
+.back-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background: linear-gradient(135deg, var(--quantum-blue), var(--supernova));
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 247, 255, 0.4);
+}
+
+.back-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.6);
+}
+
+.download-singularity {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background: linear-gradient(135deg, var(--quantum-blue), var(--supernova));
+    border: none;
+    border-radius: 10px;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 40px rgba(0, 247, 255, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.download-singularity::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.download-singularity:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 60px rgba(255, 0, 255, 0.8);
+}
+
+.download-singularity:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.download-singularity span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Quantum Alert Responsive Fixes */
+.quantum-alert {
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--event-horizon);
+    padding: 2rem;
+    border-radius: 12px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 104;
+    display: none;
+}
+
+.quantum-alert h2 {
+    color: var(--supernova);
+    margin-top: 0;
+}
+
+.quantum-alert p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.quantum-alert-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.quantum-alert-buttons button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background: linear-gradient(135deg, var(--quantum-blue), var(--supernova));
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quantum-alert-buttons button:hover {
+    transform: scale(1.05);
+}
+
+.quantum-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 103;
+    display: none;
+}
+
+/* New Styles for Speed Hub X */
+.script-container {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--quantum-blue);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.script-container pre {
+    color: var(--quantum-blue);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+}
+
+.copy-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background: linear-gradient(135deg, var(--quantum-blue), var(--supernova));
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 247, 255, 0.4);
+    margin-top: 1rem;
+}
+
+.copy-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+    .post-card {
+        padding: 1.5rem;
+    }
+
+    .holo-theater {
+        padding: 1rem;
+    }
+
+    .singularity-video {
+        height: calc(100vh - 160px);
+    }
+
+    .search-bar {
+        width: 90%;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+}
