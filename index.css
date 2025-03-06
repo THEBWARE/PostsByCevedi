@@ -340,4 +340,14 @@ body {
     .search-bar input {
         width: 100%;
     }
+    /* Monaco Editor iframe styling */
+.holo-theater iframe {
+    width: 100%;
+    height: calc(100vh - 200px);
+    border: 2px solid var(--quantum-blue);
+    border-radius: 20px;
+    box-shadow: 0 0 80px rgba(0, 247, 255, 0.3);
+    background: #000;
+    margin-top: 2rem;
+}
 }
