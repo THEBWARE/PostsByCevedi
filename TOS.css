@@ -1,0 +1,44 @@
+body {
+    font-family: 'Oxanium', sans-serif;
+    background: radial-gradient(circle at center, #0a0a15, #000);
+    color: #00f7ff;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tos-container {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid #00f7ff;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 600px;
+    text-align: center;
+}
+
+.tos-container h1 {
+    margin-top: 0;
+}
+
+.tos-container ol {
+    text-align: left;
+}
+
+.tos-container button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background: linear-gradient(135deg, #00f7ff, #ff00ff);
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 247, 255, 0.4);
+}
+
+.tos-container button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.6);
+}
